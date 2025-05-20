@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudralay Bibah Bhawan</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABL0lEQVQ4jZ2TsUoDQRCGv92LmkJCwEIRbAMWKRXFwkIsvcJH8A18BB/AR7ASC7GxEhsLsZFgIQiCYKOIKJK7TObcsIezi5e5Yu/+2f/bmdlZiQgpENkDTgADXNJ5AU4Bn5wZ+0iYALo5gQUiS2FfCnxPANqtOgCrQDsDeAXeM8+UMwWsvDf9L5ABTBQQYAbGdhoRi86hVYHK2nDPVbIJUAGqGcCKc6iBN+9NpQC9WdVlYOFR3YnG4xHwAXwCj86h8PEUGDeB+6ZgB9gGCuDGOef/+A2wma2QWlWAbeBWZLRSsxdiEFnbq/8XMHRwMqtaZNWb1ZbXZHXgXuQMGAN3wKHIyTfg0vvkdsCpyA6wB2wBG//p4Bx4Bh6AWyCkXeCIEyXtgptC13D7BXZSNPIy/QS9AAAAAElFTkSuQmCC">
+    <!-- Font Awesome CDN for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #FFD700;
+            --hover-color: #FFA500;
+            --light-bg: #FFF8DC;
+            --card-bg: #ece8d6;
+            --text-color: #333;
+            --white: #fff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 50px;
+            transition: var(--transition);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        .contact-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-button:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 5%;
+            background-color: var(--light-bg);
+            min-height: 80vh;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            animation: fadeInRight 1s ease-in;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        section:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .content-container {
+            padding: 20px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        section li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Gallery section */
+        .section-container {
+            padding: 40px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+        }
+        .carousel-slide a img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 0;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-control-btn {
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        .carousel-control-btn:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .indicator.active {
+            background-color: rgba(255,255,255,1);
+        }
+
+
+        @media (max-width: 600px) {
+            .carousel-control-btn {
+                font-size: 18px;
+                padding: 8px 12px;
+            }
+        }
+
+            .indicator {
+                width: 10px;
+                height: 10px;
+            }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-details,
+        .contact-form {
+            flex: 1 1 45%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .contact-details:hover,
+        .contact-form:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .contact-details h3,
+        .contact-form h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .contact-details p {
+            margin: 12px 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(139, 0, 0, 0.3);
+        }
+
+        .error-message {
+            color: var(--primary-color);
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-form button:hover {
+            background-color: #a40000;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .address {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons a {
+            color: var(--white);
+            margin: 0 15px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        footer .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Favorite/Share Button */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+        }
+
+        .fav-button {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .fav-button i {
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        .fav-button:hover {
+            transform: scale(1.1);
+            background-color: #a40000;
+        }
+
+        .share-menu {
+            position: absolute;
+            bottom: 70px;
+            right: 10px;
+            background-color: var(--white);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .share-menu.active {
+            display: flex;
+        }
+
+        .share-menu a {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .share-menu a:hover {
+            background-color: #f5f5f5;
+        }
+
+        .share-menu i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .share-menu .whatsapp i {
+            color: #25D366;
+        }
+
+        .share-menu .email i {
+            color: #D44638;
+        }
+
+        .share-menu .facebook i {
+            color: #3b5998;
+        }
+
+        .share-menu .copy-link i {
+            color: #333;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            #hero {
+                padding: 40px 5%;
+                min-height: auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.5rem;
+            }
+
+            section ul {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-btn {
+                display: block !important;
+            }
+
+            .desktop-btn {
+                display: none !important;
+            }
+
+            header {
+                padding: 15px 4%;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 10px;
+            }
+
+            nav {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+                transform: translateY(-150%);
+                transition: var(--transition);
+                opacity: 0;
+                visibility: hidden;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav a {
+                margin: 10px 0;
+                display: block;
+            }
+
+            #hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 5%;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.3rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-details,
+            .contact-form {
+                width: 100%;
+            }
+
+            .slider img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.2rem;
+            }
+
+            section h2 {
+                font-size: 1.7rem;
+            }
+
+            section ul {
+                grid-template-columns: 1fr;
+            }
+
+            .slider img {
+                height: 200px;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .fav-button {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .mobile-btn{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/Logo2.png" alt="RUDRALAY.COM">
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#Service">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <div class="mobile-btn">
+                <button class="contact-button" onclick="scrollToContact()">Contact Us</button>
+            </div>
+        </nav>
+        <div class="desktop-btn">
+            <button class="contact-button" onclick="scrollToContact()">Contact Us</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-text">
+            <h1>Welcome to Rudralay Bibah Bhawan</h1>
+            <h2>Your Dream Wedding Venue</h2>
+            <p>RUDRALAY Vivah Bhawan offers an exceptional setting for your special day. With elegant decor, luxurious
+                spaces, and outstanding services, we help turn your wedding into an unforgettable celebration.</p>
+            <button class="contact-button" onclick="scrollToContact()">Book Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="./images/hero section img.png" alt="Wedding Venue Image">
+        </div>
+    </section>
+
+    <!-- About Company Info -->
+    <section id="about">
+        <h2>About Rudralay Bibah Bhawan</h2>
+        <div class="content-container">
+            <p>Rudralay Bibah Bhawan provides the perfect venue and services to make your events memorable and
+                hassle-free. Here's what we offer:</p>
+            <ul>
+                <li>Marriage events and matrimony services</li>
+                <li>7000 sqft area across two floors for weddings, office meetings, conferences, birthdays, and
+                    engagement celebrations</li>
+                <li>Affordable packages for the people of Rangia, Assam</li>
+                <li>Kitchen utensils, 350 chairs, and 30 tables included</li>
+                <li>Power backup with inverter and generator</li>
+                <li>Music system for event celebrations</li>
+                <li>7500 sqft dedicated parking space</li>
+                <li>1 bedroom with attached bathroom and a total of 3 bathrooms for guests</li>
+                <li>Professional and friendly staff to assist with all arrangements</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section id="Service">
+        <h2>Our Services</h2>
+        <div class="content-container">
+            <p>Rudralay Bibah Bhawan offers a wide range of services to make your event exceptional:</p>
+            <ul>
+                <li>Marriage event planning and matrimony services</li>
+                <li>Venue rental for weddings, office meetings, conferences, birthdays, and engagement parties</li>
+                <li>Full catering setup with kitchen utensils</li>
+                <li>Seating arrangement with 350 chairs and 30 tables</li>
+                <li>Power backup through inverter and generator</li>
+                <li>Music system setup for event entertainment</li>
+                <li>Ample parking space of 7,500 sqft</li>
+                <li>One bedroom with attached bathroom and three additional bathrooms</li>
+                <li>On-site staff for event assistance and coordination</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section-container">
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- 15 slides wrapped in <a> for clickable -->
+                    <div class="carousel-slide"><a href="#"><img src="./images/1.jpeg" alt="Image 1"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/2.jpeg" alt="Image 2"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/3.jpeg" alt="Image 3"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/4.jpeg" alt="Image 4"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/5.jpeg" alt="Image 5"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/6.jpeg" alt="Image 6"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/7.jpeg" alt="Image 7"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/8.jpeg" alt="Image 8"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/9.jpeg" alt="Image 9"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/10.jpeg" alt="Image 10"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/11.jpeg" alt="Image 11"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/12.jpeg" alt="Image 12"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/13.jpeg" alt="Image 13"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/14.jpeg" alt="Image 14"></a></div>
+                    <div class="carousel-slide"><a href="#"><img src="./images/15.jpeg" alt="Image 15"></a></div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control-btn prev-btn" id="prevBtn">&#10094;</button>
+                <button class="carousel-control-btn next-btn" id="nextBtn">&#10095;</button>
+            </div>
+            <div class="carousel-indicators" id="indicators">
+                <!-- 15 indicators -->
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
+                <span class="indicator" data-index="5"></span>
+                <span class="indicator" data-index="6"></span>
+                <span class="indicator" data-index="7"></span>
+                <span class="indicator" data-index="8"></span>
+                <span class="indicator" data-index="9"></span>
+                <span class="indicator" data-index="10"></span>
+                <span class="indicator" data-index="11"></span>
+                <span class="indicator" data-index="12"></span>
+                <span class="indicator" data-index="13"></span>
+                <span class="indicator" data-index="14"></span>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-details">
+                <h3>Get in Touch</h3>
+                <p><strong>Rudralay Bibah Bhawan</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> Rangia, Assam</p>
+                <p><i class="fas fa-phone"></i> 8135926102 / 9210306800</p>
+                <p><i class="fas fa-user"></i> Contact Person: Ms Geetashree Das Kalita</p>
+                <p><i class="fas fa-envelope"></i> das_geetashree@yahoo.com</p>
+                <div class="social-icons" style="margin-top: 20px; text-align: left;">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918135926102" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Inquiry Form</h3>
+                <form id="inquiryForm" onsubmit="return validateForm(event)">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <div id="emailError" class="error-message">Please enter a valid email address</div>
+
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    <div id="phoneError" class="error-message">Please enter a valid phone number</div>
+
+                    <textarea name="message" id="message" rows="4" placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="address">
+            <p><strong>Rudralay Bibah Bhawan</strong></p>
+            <p>Rangia, Assam, India</p>
+            <p>Mobile: 8135926102 / 9210306800</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/918135926102" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p style="margin-top: 20px; font-size: 14px;">© 2025 Rudralay Bibah Bhawan. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Floating Share/Favorite Button -->
+    <div class="floating-buttons">
+        <div class="share-menu" id="shareMenu">
+            <a href="#" class="whatsapp" onclick="shareOnWhatsApp()">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" class="email" onclick="shareViaEmail()">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="#" class="facebook" onclick="shareOnFacebook()">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="#" class="copy-link" onclick="copyLink()">
+                <i class="fas fa-link"></i> Copy Link
+            </a>
+        </div>
+        <div class="fav-button" id="favButton">
+            <i class="fas fa-share-alt"></i>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking menu items
+        document.querySelectorAll('nav a').forEach(item => {
+            item.addEventListener('click', function () {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Scroll to contact section
+        function scrollToContact() {
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toggle share menu
+        document.getElementById('favButton').addEventListener('click', function () {
+            document.getElementById('shareMenu').classList.toggle('active');
+        });
+
+        // Share functions
+        function shareOnWhatsApp() {
+            const text = "Check out Rudralay Bibah Bhawan - Your Dream Wedding Venue in Rangia, Assam!";
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, '_blank');
+        }
+
+        function shareViaEmail() {
+            const subject = "Rudralay Bibah Bhawan - Wedding Venue";
+            const body = "Check out this amazing wedding venue in Rangia, Assam: " + window.location.href;
+            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function shareOnFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+        }
+
+        function copyLink() {
+            const el = document.createElement('textarea');
+            el.value = window.location.href;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Link copied to clipboard!');
+        }
+
+        // Form validation
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+
+            // Phone validation
+            const phone = document.getElementById('phone').value;
+            const phoneRegex = /^[0-9]{10,12}$/;
+            if (!phoneRegex.test(phone.replace(/[-()\s]/g, ''))) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('phoneError').style.display = 'none';
+            }
+
+            if (isValid) {
+                // Form is valid, you can submit it to a server or show success message
+                alert('Thank you for your inquiry! We will get back to you soon.');
+                document.getElementById('inquiryForm').reset();
+            }
+
+            return false;
+        }
+
+        // Close share menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const shareMenu = document.getElementById('shareMenu');
+            const favButton = document.getElementById('favButton');
+
+            if (!favButton.contains(event.target) && !shareMenu.contains(event.target) && shareMenu.classList.contains('active')) {
+                shareMenu.classList.remove('active');
+            }
+        });
+        // crousal image
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+        const totalSlides = indicators.length;
+    
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            indicators.forEach((ind, idx) => {
+                ind.classList.toggle('active', idx === currentIndex);
+            });
+        }
+    
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+    
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+    
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                currentIndex = parseInt(indicator.getAttribute('data-index'));
+                updateCarousel();
+            });
+        });
+    
+        // Optional: auto-slide
+        // setInterval(() => {
+        //     nextBtn.click();
+        // }, 5000);
+    </script>
+</body>
+
+</html>
